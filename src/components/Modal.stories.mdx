@@ -1,0 +1,25 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { SignUpModal } from './Modal';
+
+<Meta title="Design System|Modal" component={SignUpModal} />
+
+# Modal
+
+Modal is used to display the the popup in an applications.
+
+## Usage
+
+Modal are used to trigger internal actions within your web applications.
+
+## SignUpModal
+
+<Preview withToolbar>
+  <Story name="signUp">
+    <SignUpModal 
+      setShowModal={action('toggle modal state')}
+      showModal={boolean("Toggle Modal", true)}
+    />
+  </Story>
+</Preview>
